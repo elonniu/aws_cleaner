@@ -2,7 +2,7 @@
 
 set -euxo pipefail
 
-gir clone https://github.com/elonniu/aws_cleaner.git
+git clone https://github.com/elonniu/aws_cleaner.git
 
 cd aws_cleaner
 
