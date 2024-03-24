@@ -14,4 +14,4 @@ chmod +x *.sh
 ./lambda-layer.sh
 ./kms.sh
 
-# rm -rf aws_cleaner && git clone https://github.com/elonniu/aws_cleaner.git && cd aws_cleaner &&  bash ./curl.sh "us-east-1"
+# rm -rf aws_cleaner && git clone https://github.com/elonniu/aws_cleaner.git && bash aws_cleaner/curl.sh "us-east-1"
