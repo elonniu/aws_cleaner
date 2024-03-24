@@ -18,6 +18,8 @@ for region in $all_regions; do
     continue
   fi
 
+  echo "Checking region $region"
+
   log_groups=$(aws logs describe-log-groups --query 'logGroups[*].logGroupName' --output text)
 
   for log_group_name in $log_groups

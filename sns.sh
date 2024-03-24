@@ -15,9 +15,10 @@ for region in $all_regions; do
   export AWS_REGION=$region
 
   if [ "$region" = "$PROTECT_REGION" ]; then
-    echo "Skip region: $region"
     continue
   fi
+
+  echo "Checking region $region"
 
   # Retrieve all sns topics in the current region
   topics=$(aws sns list-topics --query 'Topics[].TopicArn' --output text)

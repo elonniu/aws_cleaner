@@ -29,9 +29,10 @@ for region in $all_regions; do
   export AWS_REGION=$region
 
   if [ "$region" = "$PROTECT_REGION" ]; then
-    echo "Skip region: $region"
     continue
   fi
+
+  echo "Checking region $region"
 
   layer_names=($(aws lambda list-layers --query 'Layers[].LayerName' --output text))
 
