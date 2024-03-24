@@ -4,8 +4,6 @@ set -euxo pipefail
 
 export PROTECT_REGION=$1
 
-chmod +x *.sh
-
 ./sagemaker.sh
 ./log_group.sh
 ./ecr.sh
